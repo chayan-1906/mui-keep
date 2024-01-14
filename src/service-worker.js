@@ -1,11 +1,11 @@
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open('mui-keep').then(cache => {
+        caches.open('mui-keep-v3').then(cache => {
             return cache.addAll([
                 '/',
                 '/index.html',
-                '/manifest.json',
-                '/logo.png',
+                '../public/manifest.json',
+                '../src/assets/logo.png',
             ]);
         })
     );
