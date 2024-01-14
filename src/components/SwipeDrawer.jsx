@@ -49,7 +49,7 @@ const Drawer = styled(MuiDrawer, {shouldForwardProp: (prop) => prop !== 'open'})
 )
 
 const SwipeDrawer = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     const handleDrawer = () => {
         setOpen(prevState => !prevState)
