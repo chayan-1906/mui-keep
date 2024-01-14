@@ -10,10 +10,8 @@ function App() {
             event.preventDefault()
             deferredPrompt = event
         })
-
-        // Add logic to show install button and handle user clicks
     }, [])
-    
+
     return (
         <DataProvider>
             <Home/>
