@@ -6,7 +6,7 @@ import {useContext} from 'react'
 import {DataProviderContext} from '../../context/DataProviderContext.jsx'
 import {isListEmpty} from '../../globals/GlobalFunctions.jsx'
 import EmptyNotes from './EmptyNotes.jsx'
-import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
+import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd'
 
 const DrawerHeader = styled('div')(({theme}) => ({
     ...theme.mixins.toolbar,
@@ -18,7 +18,6 @@ const reorder = (list, startIndex, endIndex) => {
     result.splice(endIndex, 0, removed)
     return result
 };
-
 
 const Notes = () => {
     const {notes, setNotes} = useContext(DataProviderContext)
@@ -43,15 +42,14 @@ const Notes = () => {
                     isListEmpty(notes) && <EmptyNotes/>
                 }
                 <DragDropContext onDragEnd={onDragEnd}>
-                    <Droppable droppable='droppable'>
-                        {(provided, snapsnot) => (
+                    <Droppable droppableId='droppable'>
+                        {(provided, snapshot) => (
                             <Grid container sx={{marginTop: '10px'}}
                                   {...provided.droppableProps}
                                   ref={provided.innerRef}>
                                 {
-                                    !isListEmpty(notes) &&
-                                    notes.map((note, index) => {
-                                        return (
+                                    (!isListEmpty(notes) &&
+                                        notes.map((note, index) => (
                                             <Draggable key={note.id} draggableId={note.id} index={index}>
                                                 {(provided, snapshot) => (
                                                     <Grid item
@@ -62,8 +60,7 @@ const Notes = () => {
                                                     </Grid>
                                                 )}
                                             </Draggable>
-                                        )
-                                    })
+                                        ))) || null
                                 }
                             </Grid>
                         )}
