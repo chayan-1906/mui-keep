@@ -1,7 +1,17 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
+import {VitePWA} from 'vite-plugin-pwa'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    VitePWA({
+      manifest: {
+        name: 'MUI Keep',
+        short_name: 'MUI Keep',
+        theme_color: '#000',
+      },
+      strategies: ['cacheFirst', 'networkFirst'],
+    }),
+  ],
 })

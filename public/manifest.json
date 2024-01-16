@@ -1,14 +1,13 @@
 {
   "name": "MUI Keep",
-  "short_name": "Keep",
-  "description": "Google Keep Clone with React Material UI",
-  "start_url": ".",
+  "short_name": "MUI Keep",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
   "theme_color": "#000000",
+  "background_color": "#ffffff",
   "icons": [
     {
-      "src": "../src/assets/logo.png",
+      "src": "/logo.png",
       "sizes": "192x192",
       "type": "image/png"
     }

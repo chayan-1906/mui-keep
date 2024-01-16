@@ -22,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2",
     "styled-components": "^6.1.8",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "vite-plugin-pwa": "^0.17.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
